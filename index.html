@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" onmouseover="changeBack()" onmouseleave="changeNormal()">
+        <h1>This is an Example of JavaScript Events </h1>
+        <button onclick="pageLoad()">Click Me</button>
+        <input type="text" onkeydown="inputChange()" onfocus="focused()">
+    </div>
+    <script>
+        function pageLoad(){
+            alert("jayant thakur");
+            var z = document.getElementsByTagName("h1");
+            z[0].innerHTML = "Event Handler Call Successfully";
+            z[0].style.color = "blue";
+        }
+        function changeBack(){
+            var a = document.getElementsByClassName("container");
+            a[0].style.backgroundColor = "red";
+        }
+        function changeNormal(){
+            var a = document.getElementsByClassName("container");
+            a[0].style.backgroundColor = "deeppink";
+        }
+        function inputChange(){
+            var b = document.getElementsByTagName("input");
+            b[0].style.outline = "none";
+            b[0].style.border = "5px solid blue";
+            b[0].style.color = "blue";
+        }
+        function focused(){
+            var b = document.getElementsByTagName("input");
+            b[0].style.outline = "none";
+            b[0].style.border = "5px solid green";
+        }
+        
+    </script>
+</body>
+</html>
